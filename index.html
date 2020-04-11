@@ -52,6 +52,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
         function coronavirusAdd(){
             coronavirus_count = coronavirus_count + 1;
+		//increments and calculates coronavrius percentage by adding up questions related to it
 	alert(coronavirus_count); 
 // this function is used to add 1 every time "yes" to coronavirus is recorded.
 
@@ -59,21 +60,42 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function fluAdd(){
             flu_count = flu_count + 1;
+			//increments and calculates flu percentage by adding up questions related to it
 		alert(flu_count);
 // this function is used to add 1 every time "yes" to flu is recorded.
         }
-
+	
+//function that shows overall results
+	fuction showResults() {
+		var coronavirusPercent = Math.round((coronavirus_count / total)*100);
+		var fluPercent = Math.round((flu_count / total)*100);
+		//shows the results 
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is the coronavirus =" + coronavirusPercent + "%<br> Probability it is the flu =" + fluPercent + "%";
+	}
+	
         function coldAdd(){
             cold_count = cold_count + 1;
+			//increments and calculates cold percentage by adding up questions related to it
 		alert(cold_count);
 // this function is used to add 1 every time "yes" to cold is recorded.
         }
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
+			//increments and calculates allergy percentage by adding up questions related to it
 		alert(allergy_count);
 // this function is used to add 1 every time "yes" to allergy is recorded.
         }
+	
+	fuction showResults() {
+		var coldPercent = Math.round((cold_count / total)*100);
+		var allergyPercent = Math.round((allergy_count / total)*100);
+		//shows the results 
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is a cold =" + coldPercent + "%<br> Probability it is allergies =" + allergyPercent + "%";
+	}
+	
 function coronavirusPercent(){ 
 	coronavirusPercent=(coronavirus_count / 11)*100; 
 	// this function calculates the percent of the coronavirus count		  
@@ -106,7 +128,7 @@ function showResults() {
 	//var coldPercent = cold_count / total)*100;
 	//var allergyPercent = allergy_count / total)*100;
 	var resultText = document.getElementById("results");	
-resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPercent + "%<br> Probability you have the flu =" + fluPercent + "Probability you have a cold =" + coldPercent + "%<br> Probability you have allergies =" + allergyPercent + "%";
+//resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPercent + "%<br> Probability you have the flu =" + fluPercent + "Probability you have a cold =" + coldPercent + "%<br> Probability you have allergies =" + allergyPercent + "%";
 //function to show the results of the probabilities 
 }
 	

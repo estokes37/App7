@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-Deecipher if someone has a concussion or not through coding the app to generate results based on responses. 
+Deecipher if someone has the Coronavirus, a cold, the flu, or seasonal allergies. 
  
 Known Issues:
 Not available.
@@ -26,7 +26,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Do You Have a Concussion?</title>
+      <title>Do You Have the Coronavirus?</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -43,42 +43,70 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var concussion_count = 0;
-        var nonconcussion_count = 0;
-	// these are the variables. to calculate the percentages, the count of each will be divided by six and then multiplied by 100.
-	var total = 6;
+        var conronavirus_count = 0;
+        var flu_count = 0;
+	var cold_count = 0;
+	var allergy_count = 0;
+	// these are the variables. to calculate the percentages, the count of each will be divided by eleven and then multiplied by 100.
+	var total = 11;
 	
-        function concussionAdd(){
-            concussion_count = concussion_count + 1;
-	alert(concussion_count); 
-// this function is used to add 1 every time "yes" to allergy is recorded.
+        function coronavirusAdd(){
+            coronavirus_count = coronavirus_count + 1;
+	alert(coronavirus_count); 
+// this function is used to add 1 every time "yes" to coronavirus is recorded.
 
         }
 
-        function nonconcussionAdd(){
-            nonconcussion_count = nonconcussion_count + 1;
-		alert(nonconcussion_count);
+        function fluAdd(){
+            flu_count = flu_count + 1;
+		alert(flu_count);
+// this function is used to add 1 every time "yes" to flu is recorded.
+        }
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+		alert(cold_count);
 // this function is used to add 1 every time "yes" to cold is recorded.
         }
-function concussionPercent(){ 
-	concussionPercent=(concussion_count / 6)*100; 
-	// this function calculates the percent of the concussion count		  
+
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		alert(allergy_count);
+// this function is used to add 1 every time "yes" to allergy is recorded.
+        }
+function coronavirusPercent(){ 
+	coronavirusPercent=(coronavirus_count / 11)*100; 
+	// this function calculates the percent of the coronavirus count		  
 	
 	}
 	
-function nonconcussionPercent(){ 
-	nonconcussionPercent=(nonconcussion_count / 6)*100;
-	// this function calculates the percent of the nonconcussion count
+function fluPercent(){ 
+	fluPercent=(flu_count / 11)*100;
+	// this function calculates the percent of the flu count
+	}
+	
+function coldPercent(){ 
+	coldPercent=(cold_count / 11)*100;
+	// this function calculates the percent of the cold count
+	}
+	
+function allergyPercent(){ 
+	allergyPercent=(allergy_count / 11)*100;
+	// this function calculates the percent of the allergy count
 	}
 	
 
 function showResults() {
-	concussionPercent();
-	nonconcussionPercent();
-	//var concussionPercent = concussion_count / total)*100; 
-	//var nonconcussionPercent = nonconcussion_count / total)*100;
+	coronavirusPercent();
+	fluPercent();
+	coldPercent();
+	allergyPercent();
+	//var coronavirusPercent = coronavirus_count / total)*100; 
+	//var fluPercent = flu_count / total)*100;
+	//var coldPercent = cold_count / total)*100;
+	//var allergyPercent = allergy_count / total)*100;
 	var resultText = document.getElementById("results");	
-resultText.innerHTML = "Probability you have a concussion =" + concussionPercent + "<br> Probability you do not have a concussion =" + nonconcussionPercent + "%"; 
+resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPercent + "<br> Probability you do not have the flu =" + fluPercent "Probability you have a cold =" + coldPercent + "Probability you have allergies =" + allergyPercent "+";
 //function to show the results of the probabilities 
 }
 	

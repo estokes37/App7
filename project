@@ -1,0 +1,245 @@
+<!DOCTYPE html> 
+<html> 
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+ 
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+ 
+ 
+Authors in chronological order of contribution:
+Tim Riedel
+Erisa Stokes
+ 
+Further Information:
+http://cns.utexas.edu/fri
+ 
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+ 
+Brief Description of Goal of Code:
+Deecipher if someone has a concussion or not through coding the app to generate results based on responses. 
+ 
+Known Issues:
+Not available.
+https://www.w3schools.com/w3css/default.asp
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+-->
+	
+   <head> 
+      <title>Do You Have a Concussion?</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+	   
+<style>
+       	img, object{
+            	max-height:90%;
+        		max-width:90%;
+        	}
+</style>
+
+   </head> 
+
+
+<script>
+        var concussion_count = 0;
+        var nonconcussion_count = 0;
+	// these are the variables. to calculate the percentages, the count of each will be divided by six and then multiplied by 100.
+	var total = 6;
+	
+        function concussionAdd(){
+            concussion_count = concussion_count + 1;
+	alert(concussion_count); 
+// this function is used to add 1 every time "yes" to allergy is recorded.
+
+        }
+
+        function nonconcussionAdd(){
+            nonconcussion_count = nonconcussion_count + 1;
+		alert(nonconcussion_count);
+// this function is used to add 1 every time "yes" to cold is recorded.
+        }
+function concussionPercent(){ 
+	concussionPercent=(concussion_count / 6)*100; 
+	// this function calculates the percent of the concussion count		  
+	
+	}
+	
+function nonconcussionPercent(){ 
+	nonconcussionPercent=(nonconcussion_count / 6)*100;
+	// this function calculates the percent of the nonconcussion count
+	}
+	
+
+function showResults() {
+	concussionPercent();
+	nonconcussionPercent();
+	//var concussionPercent = concussion_count / total)*100; 
+	//var nonconcussionPercent = nonconcussion_count / total)*100;
+	var resultText = document.getElementById("results");	
+resultText.innerHTML = "Probability you have a concussion =" + concussionPercent + "<br> Probability you do not have a concussion =" + nonconcussionPercent + "%"; 
+//function to show the results of the probabilities 
+}
+	
+	
+</script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;	  
+}
+</style>
+
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Do you have a concussion?</h1>
+</div>
+	
+<div id="content" class="w3-container"> 
+	<p>Have you recently recieved head trauma that is possible a concussion? Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	
+<!--image of head injury-->
+	<img src="https://static.scientificamerican.com/sciam/cache/file/9D5D9E6C-1A90-4760-8D13AF999CC8AE28_source.jpg?w=590&h=800&F4E88D83-AC80-4788-B648CAC6F0619776">
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are you dizzy or disoriented?</p>    
+    	<a href="#two"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+	<img src="./dizzy.jpg" alt="dizzy">
+<!--image of someone that is dizzy-->
+ </div><!-- /content and button for response -->
+</div>
+
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Has your mood remained the same?</p>
+	<a href="#three"  onclick="nonconcussionAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#three"  onclick="concussionAdd();" class="w3-btn w3-black">No</a>
+	<img src="./mood.jpg" alt="mood">
+<!--image of the various moods-->
+ </div><!-- /content and button for response-->
+</div>
+
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Have you been sleeping well?</p>
+	<a href="#four"  onclick="nonconcussionAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#four"  onclick="concussionAdd();" class="w3-btn w3-black">No</a>
+	<img src="./sleep.png" alt="sleept">
+<!-- image of lack of sleep-->
+ </div><!-- /content and button for response -->
+	</div>
+	
+	<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are you sensitive to light?</p>
+	<a href="#five"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#five"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+	<img src="./light.jpg" alt="light" style= "width:90%">
+<!--image of light sensitivity-->
+ </div><!-- /content for my 6th question. Added button for question -->
+	</div>
+	
+	<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are you having difficulties remebering?</p>
+	<a href="#six"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#six"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+	<img src="./memory.jpg" alt="memory">
+<!--image of difficulties of remebering-->
+ </div><!-- /content and asks the question I created for concussion -->
+	</div>
+	
+	<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Have you been clumsy recently?</p>
+	<a href="#seven"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#seven"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+	<img src="./clumsy.jpg" alt="clumsy" style= "width:90%">
+<!--image of someone being clumsy-->
+ </div><!-- /content and asks the question I created for concussion-->
+	</div>
+	
+	
+<!-- This produces the results page-->
+<div class="page" id="seven">
+	<!-- This produces the header with the title "Results" and an orange color -->
+	<div class="w3-container w3-flat-carrot">
+		<div id="header" class="w3-container w3-flat-carrot">
+			<h1>Results</h1>
+	
+		
+	</div>
+	
+		
+	<div id="content" class="w3-container">
+		<!-- This is the results -->
+		<button onclick= "showResults()">Results</button>
+		<p id="results">Results Here</p>
+	
+
+
+<a href="#one" class="w3-btn w3-black"> Go to Page One </a>
+ </div><!-- /content -->
+	</div>
+<!--button to go back to page one-->
+
+
+								  
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+</body>
+</html>

@@ -106,7 +106,7 @@ function showResults() {
 	//var coldPercent = cold_count / total)*100;
 	//var allergyPercent = allergy_count / total)*100;
 	var resultText = document.getElementById("results");	
-resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPercent + "<br> Probability you do not have the flu =" + fluPercent "Probability you have a cold =" + coldPercent + "Probability you have allergies =" + allergyPercent "+";
+resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPercent + "<br> Probability you have the flu =" + fluPercent + "<br> Probability you have a cold =" + coldPercent + "<br> Probability you have allergies =" + allergyPercent + "%";
 //function to show the results of the probabilities 
 }
 	
@@ -164,7 +164,7 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
         <p>How long are your symptoms?</p>    
     	<a href="#two"  onclick="coronavirusAdd();" class="w3-btn w3-black">7-25 days</a> <!--button for answer to question-->
         <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a> 
-	<a href="#two"  onclick="coldvirusAdd();" class="w3-btn w3-black">Less than 14 days</a>
+	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">Less than 14 days</a>
         <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
 	<img src="./dizzy.jpg" alt="dizzy">
 <!--image of someone that is dizzy-->

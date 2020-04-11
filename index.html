@@ -123,12 +123,12 @@ function showResults() {
 	fluPercent();
 	coldPercent();
 	allergyPercent();
-	//var coronavirusPercent = coronavirus_count / total)*100; 
-	//var fluPercent = flu_count / total)*100;
-	//var coldPercent = cold_count / total)*100;
-	//var allergyPercent = allergy_count / total)*100;
+	var coronavirusPercent = coronavirus_count / total)*100; 
+	var fluPercent = flu_count / total)*100;
+	var coldPercent = cold_count / total)*100;
+	var allergyPercent = allergy_count / total)*100;
 	var resultText = document.getElementById("results");	
-//resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPercent + "%<br> Probability you have the flu =" + fluPercent + "Probability you have a cold =" + coldPercent + "%<br> Probability you have allergies =" + allergyPercent + "%";
+resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPercent + "%<br> Probability you have the flu =" + fluPercent + "Probability you have a cold =" + coldPercent + "%<br> Probability you have allergies =" + allergyPercent + "%";
 //function to show the results of the probabilities 
 }
 	

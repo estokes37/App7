@@ -161,9 +161,11 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are you dizzy or disoriented?</p>    
-    	<a href="#two"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+        <p>How long are your symptoms?</p>    
+    	<a href="#two"  onclick="coronavirusAdd();" class="w3-btn w3-black">7-25 days</a> <!--button for answer to question-->
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a> 
+	<a href="#two"  onclick="coldvirusAdd();" class="w3-btn w3-black">Less than 14 days</a>
+        <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
 	<img src="./dizzy.jpg" alt="dizzy">
 <!--image of someone that is dizzy-->
  </div><!-- /content and button for response -->
@@ -175,9 +177,11 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Has your mood remained the same?</p>
-	<a href="#three"  onclick="nonconcussionAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#three"  onclick="concussionAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have a cough?</p>
+	<a href="#three"  onclick="coronavirusAdd();" class="w3-btn w3-black">Yes, dry cough</a>
+        <a href="#three"  onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes, mild</a>
+        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	<img src="./mood.jpg" alt="mood">
 <!--image of the various moods-->
  </div><!-- /content and button for response-->

@@ -178,8 +178,7 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a cough?</p>
-	<a href="#three"  onclick="coronavirusAdd();" class="w3-btn w3-black">Yes, dry cough</a>
-        <a href="#three"  onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="coronavirusAdd();" onclick="fluAdd();" class="w3-btn w3-black">Yes, dry cough</a> <!--multiple buttons for various answers to the questions-->
 	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes, mild</a>
         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	<img src="./mood.jpg" alt="mood">
@@ -193,9 +192,9 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Have you been sleeping well?</p>
-	<a href="#four"  onclick="nonconcussionAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#four"  onclick="concussionAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have shortness of breath?</p>
+	<a href="#four"  onclick="coronavirusAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#four"  onclick="coldAdd();" onclick="fluAdd();" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	<img src="./sleep.png" alt="sleept">
 <!-- image of lack of sleep-->
  </div><!-- /content and button for response -->
@@ -207,9 +206,9 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are you sensitive to light?</p>
-	<a href="#five"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#five"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+	<p>Have you been sneezing?</p>
+	<a href="#five"  onclick="coldAdd();" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#five"  onclick="coronavirusAdd();" onclick="fluAdd();" class="w3-btn w3-black">No</a>
 	<img src="./light.jpg" alt="light" style= "width:90%">
 <!--image of light sensitivity-->
  </div><!-- /content for my 6th question. Added button for question -->
@@ -221,9 +220,9 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are you having difficulties remebering?</p>
-	<a href="#six"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#six"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have a runny nose?</p>
+	<a href="#six"  onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#six"  onclick="fluAdd();" onclick="coronavirusAdd;" class="w3-btn w3-black">No</a>
 	<img src="./memory.jpg" alt="memory">
 <!--image of difficulties of remebering-->
  </div><!-- /content and asks the question I created for concussion -->
@@ -235,9 +234,79 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Have you been clumsy recently?</p>
-	<a href="#seven"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#seven"  onclick="nonconcussionAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have a sore throat?</p>
+	<a href="#seven"  onclick="coronavirusAdd();" onclick="fluAdd();" onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#seven"  onclick="coronavirusAdd();" onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<img src="./clumsy.jpg" alt="clumsy" style= "width:90%">
+<!--image of someone being clumsy-->
+ </div><!-- /content and asks the question to decipher if it is the coronavirus-->
+	</div>
+	
+	<div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 7</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a fever?</p>
+	<a href="#eight"  onclick="coronavirusAdd();" onclick="fluAdd();" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<img src="./clumsy.jpg" alt="clumsy" style= "width:90%">
+<!--image of someone being clumsy-->
+ </div><!-- /content and asks the question I created for concussion-->
+	</div>
+	
+	<div class="page" id="eight">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 8</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Have you been feeling weak?</p>
+	<a href="#nine"  onclick="coronavirusAdd();" onclick="fluAdd();" onclick="coldAdd();" onclick"allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#nine"  onclick="allergyAdd();" onclick="coldAdd();" onclick="coronavirusAdd();" class="w3-btn w3-black">No</a>
+	<img src="./clumsy.jpg" alt="clumsy" style= "width:90%">
+<!--image of someone being clumsy-->
+ </div><!-- /content and asks the question I created for concussion-->
+	</div>
+	
+	<div class="page" id="nine">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have headaches?</p>
+	<a href="#ten"  onclick="coronavirusAdd();" onclick="fluAdd();" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#ten"  onclick="coldAdd();" onclick="coronavirusAdd();" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<img src="./clumsy.jpg" alt="clumsy" style= "width:90%">
+<!--image of someone being clumsy-->
+ </div><!-- /content and asks the question I created for concussion-->
+	</div>
+	
+	<div class="page" id="ten">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 10</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a fever?</p>
+	<a href="#eleven"  onclick="coronavirusAdd();" onclick="fluAdd();" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#eleven"  onclick="allergyAdd();" onclick="coronavirusAdd();" class="w3-btn w3-black">No</a>
+	<img src="./clumsy.jpg" alt="clumsy" style= "width:90%">
+<!--image of someone being clumsy-->
+ </div><!-- /content and asks the question I created for concussion-->
+	</div>
+	
+	<div class="page" id="eleven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 11</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a fever?</p>
+	<a href="#twelve"  onclick="coronavirusAdd();" onclick="fluAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#twelve"  onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	<img src="./clumsy.jpg" alt="clumsy" style= "width:90%">
 <!--image of someone being clumsy-->
  </div><!-- /content and asks the question I created for concussion-->
@@ -245,7 +314,7 @@ resultText.innerHTML = "Probability you have the coronavirus =" + coronavirusPer
 	
 	
 <!-- This produces the results page-->
-<div class="page" id="seven">
+<div class="page" id="twelve">
 	<!-- This produces the header with the title "Results" and an orange color -->
 	<div class="w3-container w3-flat-carrot">
 		<div id="header" class="w3-container w3-flat-carrot">
